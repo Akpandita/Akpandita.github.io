@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <motion.section
       id="about"
-      className="my-12"
+      className="my-12 rounded-2xl shadow-xl bg-black/60 backdrop-blur-md border border-white/20 px-6 py-8"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

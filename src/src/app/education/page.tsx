@@ -6,7 +6,7 @@ export default function EducationSection() {
   return (
     <motion.section
       id="education"
-      className="my-12"
+      className="my-12 rounded-2xl shadow-xl bg-black/80 text-white backdrop-blur-md border border-white/20 px-6 py-8"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
