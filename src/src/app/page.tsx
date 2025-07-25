@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AboutSection from "./about/page";
+import ExperienceSection from "./experience/page";
 import WorkSection from "./work/page";
 import EducationSection from "./education/page";
 import ContactSection from "./contact/page";
@@ -45,6 +46,7 @@ export default function Home() {
         <nav className="mt-6">
           <ul className="flex flex-wrap gap-6 justify-center text-lg font-semibold">
             <li><a href="#about" className="hover:text-blue-400 transition-colors text-white">About</a></li>
+            <li><a href="#experience" className="hover:text-blue-400 transition-colors text-white">Experience</a></li>
             <li><a href="#work" className="hover:text-blue-400 transition-colors text-white">Work</a></li>
             <li><a href="#education" className="hover:text-blue-400 transition-colors text-white">Education</a></li>
             <li><a href="#contact" className="hover:text-blue-400 transition-colors text-white">Contact</a></li>
@@ -55,6 +57,7 @@ export default function Home() {
       {/* Main Content */}
       <main id="main" className="w-full max-w-4xl mx-auto flex-1 px-4">
         <AboutSection />
+        <ExperienceSection />
         <WorkSection />
         <EducationSection />
         <ContactSection />
