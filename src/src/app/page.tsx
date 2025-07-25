@@ -1,11 +1,18 @@
-
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div id="wrapper" className="min-h-screen flex flex-col items-center bg-gray-50 dark:bg-black">
       {/* Header */}
-      <header id="header" className="w-full max-w-4xl mx-auto py-8 flex flex-col items-center">
+      <motion.header
+        id="header"
+        className="w-full max-w-4xl mx-auto py-8 flex flex-col items-center"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
         <div className="logo mb-4">
           <span className="icon fa-diamond text-5xl text-blue-600" aria-hidden="true"></span>
         </div>
@@ -24,12 +31,19 @@ export default function Home() {
             <li><a href="#contact" className="hover:underline">Contact</a></li>
           </ul>
         </nav>
-      </header>
+      </motion.header>
 
       {/* Main Content */}
       <main id="main" className="w-full max-w-4xl mx-auto flex-1 px-4">
         {/* About Section */}
-        <section id="about" className="my-12">
+        <motion.section
+          id="about"
+          className="my-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="major text-2xl font-semibold mb-4">ABOUT ME</h2>
           <div className="inner mb-6">
             <p className="font-bold">Hii!! I'm Akshay, INFORMATION TECHNOLOGY Student at NITK, Surathkal. I was born and brought up in Talab Tillo, Jammu, J&K, India. I like playing chess, rules of survival and solving puzzles. Regarding tech skills, I do competitive coding a lot. I also like doing web developement and app developement.</p>
@@ -60,10 +74,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Work Section */}
-        <section id="work" className="my-12">
+        <motion.section
+          id="work"
+          className="my-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           <h2 className="major text-2xl font-semibold mb-4">Work</h2>
           <div className="inner">
             <h3 className="text-xl font-semibold mb-2">PROJECTS</h3>
@@ -127,10 +148,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Education Section */}
-        <section id="education" className="my-12">
+        <motion.section
+          id="education"
+          className="my-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
           <h2 className="major text-2xl font-semibold mb-4">Education</h2>
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <Image src="/images/education.jpg" width={300} height={200} alt="Education" className="rounded-lg object-cover" />
@@ -142,10 +170,17 @@ export default function Home() {
               <p>Currently, I'm pursuing B.Tech. in INFORMATION TECHNOLOGY from <b>National Institute of Technology Karnataka, Surathkal</b> which is one of the best colleges in India. I'm in the pre-final year with interest in coding and developement.</p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Contact Section */}
-        <section id="contact" className="my-12">
+        <motion.section
+          id="contact"
+          className="my-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+        >
           <h2 className="major text-2xl font-semibold mb-4">Contact</h2>
           <div className="inner">
             <form id="gform" method="post" action="https://script.google.com/macros/s/AKfycbwlGBvs2vZ_-09ww_vHm_cvMIyw8_L7jb2GZf9E/exec" className="space-y-4 max-w-lg mx-auto">
@@ -187,7 +222,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
 
       {/* Footer */}
