@@ -44,7 +44,7 @@ export default function Home() {
         </div>
         <nav className="mt-6">
           <ul className="flex flex-wrap gap-6 justify-center text-lg font-semibold">
-            <li><a href="#about" className="hover:text-blue-400 transition-colors text-white">ABOUT ME</a></li>
+            <li><a href="#about" className="hover:text-blue-400 transition-colors text-white">About</a></li>
             <li><a href="#work" className="hover:text-blue-400 transition-colors text-white">Work</a></li>
             <li><a href="#education" className="hover:text-blue-400 transition-colors text-white">Education</a></li>
             <li><a href="#contact" className="hover:text-blue-400 transition-colors text-white">Contact</a></li>
