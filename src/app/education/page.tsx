@@ -1,16 +1,12 @@
 "use client";
+import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function EducationSection() {
   return (
-    <motion.section
+    <section
       id="education"
       className="my-12 rounded-2xl shadow-xl bg-black/80 text-white backdrop-blur-md border border-white/20 px-6 py-8"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7, delay: 0.4 }}
     >
       <h2 className="major text-2xl font-semibold mb-4">Education</h2>
       <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -23,6 +19,6 @@ export default function EducationSection() {
           <p>Currently, I&apos;m pursuing B.Tech. in INFORMATION TECHNOLOGY from <b>National Institute of Technology Karnataka, Surathkal</b> which is one of the best colleges in India. I&apos;m in the pre-final year with interest in coding and developement.</p>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

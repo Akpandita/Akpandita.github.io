@@ -1,16 +1,12 @@
 "use client";
+import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function WorkSection() {
   return (
-    <motion.section
+    <section
       id="work"
       className="my-12 rounded-2xl shadow-xl bg-black/80 text-white backdrop-blur-md border border-white/20 px-6 py-8"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7, delay: 0.2 }}
     >
       <h2 className="major text-2xl font-semibold mb-4">Work</h2>
       <div className="inner">
@@ -75,6 +71,6 @@ export default function WorkSection() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

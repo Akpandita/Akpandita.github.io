@@ -1,16 +1,12 @@
 "use client";
+import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <motion.section
+    <section
       id="about"
       className="my-12 rounded-2xl shadow-xl bg-black/60 backdrop-blur-md border border-white/20 px-6 py-8"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
     >
       <h2 className="major text-2xl font-semibold mb-4">ABOUT ME</h2>
       <div className="inner mb-6">
@@ -42,6 +38,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

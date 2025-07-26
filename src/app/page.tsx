@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import React from "react";
 import AboutSection from "./about/page";
 import ExperienceSection from "./experience/page";
 import WorkSection from "./work/page";
@@ -25,12 +24,9 @@ export default function Home() {
         }}
       />
       {/* Header */}
-      <motion.header
+      <header
         id="header"
         className="w-full max-w-4xl mx-auto py-10 flex flex-col items-center rounded-2xl shadow-xl bg-black/60 backdrop-blur-md border border-white/20 mt-8 mb-4"
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
       >
         <div className="logo mb-4 flex items-center gap-3">
           <span className="icon fa-diamond text-5xl text-blue-400 drop-shadow-lg" aria-hidden="true"></span>
@@ -52,7 +48,7 @@ export default function Home() {
             <li><a href="#contact" className="hover:text-blue-400 transition-colors text-white">Contact</a></li>
           </ul>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Main Content */}
       <main id="main" className="w-full max-w-4xl mx-auto flex-1 px-4">
