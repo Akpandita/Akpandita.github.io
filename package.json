@@ -1,0 +1,16 @@
+{
+  "name": "akpandita.github.io",
+  "version": "1.0.0",
+  "description": "Akshay Pandita's Portfolio Website",
+  "scripts": {
+    "dev": "cd src && npm run dev",
+    "build": "cd src && npm run build",
+    "deploy": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akpandita/Akpandita.github.io.git"
+  },
+  "author": "Akshay Pandita",
+  "license": "MIT"
+}
