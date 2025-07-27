@@ -1,25 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const PDFViewer = () => {
-  const [isClient, setIsClient] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const resumeUrl = "/akresume.pdf";
+const resumeUrl = "/akresume.pdf";
 
-  useEffect(() => {
-    setIsClient(true);
-    setMounted(true);
-    console.log("PDFViewer mounted, resumeUrl:", resumeUrl);
-  }, []);
-
-  console.log("PDFViewer render - isClient:", isClient, "mounted:", mounted);
-
-  if (!isClient || !mounted) {
-    return <div className="text-blue-200">Loading PDF viewer...</div>;
-  }
-
+const PDFViewer: React.FC = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center bg-gray-900 min-h-screen p-8">
+      <h2 className="text-2xl font-bold text-blue-200 mb-6">Resume</h2>
+      
       <div className="mb-6 flex flex-col sm:flex-row gap-4 items-center">
         <a
           href={resumeUrl}
@@ -39,9 +27,9 @@ const PDFViewer = () => {
       </div>
       
       {/* Embedded PDF viewer for browsers that support it */}
-      <div className="w-full h-[900px] border border-gray-600 rounded-lg overflow-hidden">
+      <div className="w-full max-w-4xl h-[800px] border border-gray-600 rounded-lg overflow-hidden">
         <iframe
-          src={`${resumeUrl}#toolbar=0&navpanes=0&scrollbar=0&zoom=FitH&view=FitH`}
+          src={`${resumeUrl}#toolbar=1&navpanes=1&scrollbar=1`}
           width="100%"
           height="100%"
           className="border-0"
@@ -56,23 +44,11 @@ const PDFViewer = () => {
         </iframe>
       </div>
       
-      <p className="text-gray-300 text-sm mt-4 text-center">
+      <p className="text-gray-400 text-sm mt-4 text-center">
         If the PDF doesn&apos;t load properly, try opening it in a new tab or downloading it.
       </p>
     </div>
   );
 };
 
-const ExperienceSection: React.FC = () => {
-  return (
-    <section
-      id="experience"
-      className="my-8 p-8 rounded-2xl shadow-xl bg-black/80 backdrop-blur-md border border-white/20 text-white"
-    >
-      <h2 className="text-3xl font-bold mb-4 text-blue-300">Experience</h2>
-      <PDFViewer />
-    </section>
-  );
-};
-
-export default ExperienceSection;
+export default PDFViewer;

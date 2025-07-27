@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   basePath: '',
-  assetPrefix: './',
   images: {
     unoptimized: true,
   },
