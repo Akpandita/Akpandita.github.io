@@ -1,16 +1,31 @@
 {
-  "name": "akpandita.github.io",
-  "version": "1.0.0",
-  "description": "Akshay Pandita's Portfolio Website",
+  "name": "src",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "cd src && npm run dev",
-    "build": "cd src && npm run build",
-    "deploy": "node deploy.js"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Akpandita/Akpandita.github.io.git"
+  "dependencies": {
+    "framer-motion": "^12.23.9",
+    "next": "15.4.4",
+    "pdfjs-dist": "^5.3.31",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-pdf": "^10.0.1"
   },
-  "author": "Akshay Pandita",
-  "license": "MIT"
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
 }
